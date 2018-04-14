@@ -1,6 +1,5 @@
 all:
-	gcc-6 -O3 barra.c -o barra -fopenmp
+	icc -O3 -xHost -qopenmp barra.c -o barra
 
 debug:
-	gcc-6 -O0 -debug all barra.c -o barra -DDEBUG
-
+	icc -O0 -debug all barra.c -o barra -DDEBUG
